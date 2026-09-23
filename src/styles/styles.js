@@ -1,0 +1,183 @@
+import { Platform, StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#0d0e12' },
+  screenContainer: { flex: 1 },
+  scrollPad: { padding: 18, paddingBottom: 28 },
+
+  topHeader: {
+    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
+    paddingHorizontal: 20, paddingVertical: 14, borderBottomWidth: 1,
+    borderBottomColor: '#27272a', backgroundColor: '#0d0e12',
+  },
+  brandRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  logoBadge: {
+    width: 34, height: 34, borderRadius: 10, backgroundColor: '#ff3b30',
+    justifyContent: 'center', alignItems: 'center',
+  },
+  logoIcon: { fontSize: 16 },
+  brandTitle: { color: '#fff', fontSize: 16, fontWeight: '800', letterSpacing: 1 },
+  brandAccent: { color: '#ff4d42' },
+  brandSub: { color: '#a1a1aa', fontSize: 8, fontWeight: '800', letterSpacing: 1.5 },
+  headerRight: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  streakPill: {
+    backgroundColor: '#1a1b20', borderWidth: 1, borderColor: '#3f3f46',
+    paddingHorizontal: 12, paddingVertical: 6, borderRadius: 16, minHeight: 36,
+    justifyContent: 'center',
+  },
+  streakText: { color: '#fb923c', fontSize: 11, fontWeight: '800' },
+  headerIconBtn: {
+    width: 44, height: 44, borderRadius: 22, backgroundColor: '#1a1b20',
+    borderWidth: 1, borderColor: '#3f3f46', justifyContent: 'center', alignItems: 'center',
+  },
+  headerIcon: { fontSize: 18 },
+
+  bottomNav: {
+    flexDirection: 'row', backgroundColor: '#121317', borderTopWidth: 1,
+    borderTopColor: '#27272a', paddingVertical: 8,
+    paddingBottom: Platform.OS === 'ios' ? 22 : 12,
+  },
+  navItem: { flex: 1, minHeight: 48, justifyContent: 'center', alignItems: 'center' },
+  navIcon: { fontSize: 16, color: '#a1a1aa' },
+  navLabel: { color: '#a1a1aa', fontSize: 10, fontWeight: '700', marginTop: 3 },
+  navActive: { color: '#ff4d42' },
+
+  welcomeHero: { alignItems: 'center', marginVertical: 16 },
+  welcomeLogoLock: {
+    width: 80, height: 80, borderRadius: 24, backgroundColor: '#1c1213',
+    borderWidth: 1.5, borderColor: '#7f2722', justifyContent: 'center',
+    alignItems: 'center', marginBottom: 16,
+  },
+  welcomeTitle: { color: '#fff', fontSize: 22, fontWeight: '900', letterSpacing: 1.2 },
+  welcomeSlogan: { color: '#d4d4d8', fontSize: 13, fontWeight: '800', letterSpacing: 2, marginTop: 6 },
+  pillarsRow: { flexDirection: 'row', justifyContent: 'space-between', gap: 8, marginVertical: 14 },
+  pillarBox: {
+    flex: 1, backgroundColor: '#16171d', borderWidth: 1, borderColor: '#2e2f38',
+    borderRadius: 14, padding: 12, alignItems: 'center', minHeight: 88, justifyContent: 'center',
+  },
+  pillarIcon: { fontSize: 22, marginBottom: 6 },
+  pillarText: { color: '#fff', fontSize: 9, fontWeight: '800', textAlign: 'center' },
+  welcomePrimaryBtn: {
+    backgroundColor: '#16a34a', minHeight: 48, borderRadius: 14,
+    justifyContent: 'center', alignItems: 'center',
+  },
+  welcomePrimaryBtnText: { color: '#fff', fontSize: 13, fontWeight: '900', letterSpacing: 1 },
+  welcomeSecondaryBtn: {
+    backgroundColor: '#1a1b20', borderWidth: 1, borderColor: '#52525b',
+    minHeight: 48, borderRadius: 14, justifyContent: 'center', alignItems: 'center',
+  },
+  welcomeSecondaryBtnText: { color: '#fff', fontSize: 13, fontWeight: '800', letterSpacing: 1 },
+  featureGrid: { flexDirection: 'row', gap: 8, marginTop: 8 },
+  featureCard: {
+    flex: 1, backgroundColor: '#16171d', borderWidth: 1, borderColor: '#2e2f38',
+    borderRadius: 12, padding: 10, alignItems: 'center',
+  },
+  featureEmoji: { fontSize: 18, marginBottom: 4 },
+  featureTitle: { color: '#fff', fontSize: 8.5, fontWeight: '800', textAlign: 'center' },
+  featureDesc: { color: '#a1a1aa', fontSize: 8.5, marginTop: 2 },
+  footerTagline: { color: '#71717a', fontSize: 10, fontWeight: '800', letterSpacing: 1.5, textAlign: 'center', marginTop: 24 },
+
+  timerCenterWrap: { alignItems: 'center', paddingVertical: 8 },
+  timerRingOuter: {
+    width: 240, height: 240, borderRadius: 120, borderWidth: 4, borderColor: '#3f3f46',
+    justifyContent: 'center', alignItems: 'center', marginVertical: 16,
+  },
+  timerRingOuterLocked: { borderColor: '#ff3b30' },
+  timerRingInner: {
+    width: 210, height: 210, borderRadius: 105, backgroundColor: '#16171d',
+    justifyContent: 'center', alignItems: 'center', padding: 12,
+  },
+  monkModeLabel: { color: '#fb923c', fontSize: 10, fontWeight: '800', letterSpacing: 1, marginBottom: 4 },
+  timeBig: { color: '#fff', fontSize: 44, fontWeight: '900', letterSpacing: 1 },
+  timeTargetSub: { color: '#a1a1aa', fontSize: 11, marginTop: 4 },
+  presetTimesRow: { flexDirection: 'row', gap: 8, marginVertical: 14 },
+  presetChip: {
+    minWidth: 54, minHeight: 44, paddingHorizontal: 16, borderRadius: 22,
+    backgroundColor: '#1a1b20', borderWidth: 1, borderColor: '#3f3f46',
+    justifyContent: 'center', alignItems: 'center',
+  },
+  presetChipActive: { backgroundColor: '#1c1213', borderColor: '#ff3b30' },
+  presetChipText: { color: '#d4d4d8', fontSize: 13, fontWeight: '700' },
+  presetChipTextActive: { color: '#ff4d42' },
+  focusStatusBox: {
+    width: '100%', backgroundColor: '#16171d', borderWidth: 1, borderColor: '#2e2f38',
+    borderRadius: 14, padding: 14, marginVertical: 14,
+  },
+  focusStatusTitle: { color: '#fff', fontSize: 12, fontWeight: '800', marginBottom: 4 },
+  focusStatusBody: { color: '#d4d4d8', fontSize: 11, lineHeight: 16 },
+  timerButtons: { width: '100%', gap: 10 },
+  lockActionBtn: {
+    width: '100%', backgroundColor: '#ff3b30', minHeight: 50, borderRadius: 14,
+    justifyContent: 'center', alignItems: 'center',
+  },
+  lockActionBtnText: { color: '#fff', fontSize: 13, fontWeight: '900', letterSpacing: 1 },
+  resetBtn: {
+    width: '100%', backgroundColor: '#1f2028', minHeight: 44, borderRadius: 12,
+    borderWidth: 1, borderColor: '#3f3f46', justifyContent: 'center', alignItems: 'center',
+  },
+  resetBtnText: { color: '#d4d4d8', fontSize: 11, fontWeight: '800' },
+
+  profileCard: {
+    backgroundColor: '#16171d', borderWidth: 1, borderColor: '#2e2f38', borderRadius: 16,
+    padding: 14, flexDirection: 'row', alignItems: 'center', marginBottom: 14,
+  },
+  avatarWrap: {
+    width: 50, height: 50, borderRadius: 25, backgroundColor: '#27272a',
+    justifyContent: 'center', alignItems: 'center', borderWidth: 2, borderColor: '#10b981',
+  },
+  userName: { color: '#fff', fontSize: 18, fontWeight: '800' },
+  userStatus: { color: '#fb923c', fontSize: 11, fontWeight: '800', marginTop: 2 },
+  userMeta: { color: '#a1a1aa', fontSize: 10, marginTop: 2 },
+  editBtn: { backgroundColor: '#16a34a', minWidth: 54, minHeight: 36, borderRadius: 8, justifyContent: 'center', alignItems: 'center' },
+  editBtnText: { color: '#fff', fontSize: 11, fontWeight: '800' },
+  statsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 14 },
+  statBox: {
+    width: '48.5%', backgroundColor: '#16171d', borderWidth: 1, borderColor: '#2e2f38',
+    borderRadius: 14, padding: 12,
+  },
+  statLabel: { color: '#a1a1aa', fontSize: 8.5, fontWeight: '800', letterSpacing: 0.8 },
+  statVal: { color: '#fff', fontSize: 18, fontWeight: '900', marginTop: 4 },
+  shortcutRow: { flexDirection: 'row', gap: 8, marginBottom: 16 },
+  shortcutTile: {
+    flex: 1, backgroundColor: '#16171d', borderWidth: 1, borderColor: '#2e2f38',
+    borderRadius: 12, padding: 10, alignItems: 'center', minHeight: 74, justifyContent: 'center',
+  },
+  shortcutIcon: { fontSize: 20, marginBottom: 4 },
+  shortcutTitle: { color: '#fff', fontSize: 8.5, fontWeight: '800', textAlign: 'center', lineHeight: 11 },
+  shortcutSub: { color: '#a1a1aa', fontSize: 7.5, marginTop: 3 },
+  rewardsTitle: { color: '#d4d4d8', fontSize: 10, fontWeight: '800', letterSpacing: 1, marginBottom: 8 },
+  rewardsList: { flexDirection: 'row', gap: 8, marginBottom: 16 },
+  rewardPillCard: {
+    flex: 1, backgroundColor: '#16171d', borderWidth: 1, borderColor: '#2e2f38',
+    borderRadius: 12, padding: 10, alignItems: 'center',
+  },
+  rewardPillBadge: {
+    backgroundColor: '#ea580c', color: '#fff', fontSize: 9, fontWeight: '900',
+    paddingHorizontal: 8, paddingVertical: 3, borderRadius: 4, marginTop: 4,
+  },
+  rewardPillSub: { color: '#a1a1aa', fontSize: 8.5, marginTop: 4 },
+  primaryRedBtn: {
+    backgroundColor: '#ff3b30', minHeight: 48, borderRadius: 14,
+    justifyContent: 'center', alignItems: 'center',
+  },
+  primaryRedBtnText: { color: '#fff', fontSize: 12, fontWeight: '900', letterSpacing: 1 },
+
+  settingsTitleHeader: { color: '#ff4d42', fontSize: 18, fontWeight: '900', letterSpacing: 1.5, marginBottom: 16 },
+  settingsGroup: { marginBottom: 16 },
+  groupHeading: { color: '#ff4d42', fontSize: 11, fontWeight: '800', letterSpacing: 1.2, marginBottom: 8 },
+  settingRow: {
+    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
+    backgroundColor: '#16171d', borderWidth: 1, borderColor: '#2e2f38',
+    borderRadius: 12, padding: 14, marginBottom: 10, minHeight: 56,
+  },
+  settingTextCol: { flex: 1, marginRight: 12 },
+  settingLabel: { color: '#fff', fontSize: 13, fontWeight: '700' },
+  settingDesc: { color: '#a1a1aa', fontSize: 9.5, marginTop: 2 },
+  addContactBtn: { backgroundColor: '#ea580c', minWidth: 54, minHeight: 36, borderRadius: 6, justifyContent: 'center', alignItems: 'center' },
+  addContactBtnText: { color: '#fff', fontSize: 10, fontWeight: '800' },
+  greenSaveBtn: {
+    backgroundColor: '#16a34a', minHeight: 48, borderRadius: 14,
+    justifyContent: 'center', alignItems: 'center', marginTop: 8,
+  },
+  greenSaveBtnText: { color: '#fff', fontSize: 12, fontWeight: '900', letterSpacing: 1 },
+});
