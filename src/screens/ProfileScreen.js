@@ -18,7 +18,7 @@ import {
   ShieldIcon,
 } from '../components/icon';
 
-export default function ProfileScreen({ onStartFocus }) {
+export default function ProfileScreen({ onStartFocus, onLogOut, motivation, setMotivation }) {
   // State for editable profile details
   const [userName, setUserName] = useState('Shen');
   const [userStatus, setUserStatus] = useState('FOCUSED & FREE');
@@ -29,6 +29,8 @@ export default function ProfileScreen({ onStartFocus }) {
   const [editName, setEditName] = useState(userName);
   const [editStatus, setEditStatus] = useState(userStatus);
   const [editGoal, setEditGoal] = useState(topGoal);
+  const [motivationDraft, setMotivationDraft] = useState(motivation);
+  const [motivationSaved, setMotivationSaved] = useState(false);
 
   const handleSaveProfile = () => {
     setUserName(editName.trim() || 'User');
@@ -210,6 +212,18 @@ export default function ProfileScreen({ onStartFocus }) {
           + START FOCUS SESSION
         </Text>
       </TouchableOpacity>
+
+      <TouchableOpacity onPress={onLogOut} style={{ minHeight: 48, borderWidth: 1, borderColor: '#ff3b30', borderRadius: 14, justifyContent: 'center', alignItems: 'center', marginTop: 12 }}>
+        <Text style={{ color: '#ff4d42', fontWeight: '900', fontSize: 12, letterSpacing: 1 }}>LOG OUT</Text>
+      </TouchableOpacity>
+
+      <View style={{ backgroundColor: '#16171d', borderWidth: 1, borderColor: '#2e2f38', borderRadius: 14, padding: 15, marginTop: 16 }}>
+        <Text style={{ color: '#ffffff', fontWeight: '900', fontSize: 15 }}>DAILY MOTIVATION</Text>
+        <Text style={{ color: '#a1a1aa', fontSize: 11, marginTop: 5 }}>This appears on your home dashboard.</Text>
+        <TextInput value={motivationDraft} onChangeText={setMotivationDraft} multiline style={{ minHeight: 80, color: '#ffffff', borderWidth: 1, borderColor: '#3f3f46', borderRadius: 10, padding: 11, marginTop: 12, textAlignVertical: 'top' }} />
+        <TouchableOpacity onPress={() => { setMotivation(motivationDraft.trim() || 'Small steps today create a stronger tomorrow.'); setMotivationSaved(true); }} style={{ backgroundColor: '#f04421', borderRadius: 10, padding: 12, alignItems: 'center', marginTop: 10 }}><Text style={{ color: '#ffffff', fontWeight: '900', fontSize: 11 }}>SAVE MOTIVATION</Text></TouchableOpacity>
+        {motivationSaved && <Text style={{ color: '#4fd47b', fontSize: 11, fontWeight: '800', marginTop: 9 }}>Motivation saved successfully.</Text>}
+      </View>
 
       {/* EDIT PROFILE MODAL */}
       <Modal visible={isEditing} transparent animationType="fade">
